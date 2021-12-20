@@ -4,7 +4,9 @@ import java.util.List;
 
 public interface PersonInterface {
 
-    List<Person> getPersonList(String name);
+    List<Person> getPersonList();
+
+    void addPersonList(Person person);
 
     Person getPersonById(int id);
 
@@ -13,8 +15,5 @@ public interface PersonInterface {
     void setPersonName(String name);
     void setPersonAge (int age);
     void setPersonCity (String city);
-
-
-
 
 }

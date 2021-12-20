@@ -24,6 +24,6 @@ public class ControllerGet {
 
     @RequestMapping (value="persona/nombre/{name}", method=GET)
     public List<Person>returnPersonByName(@PathVariable String name){
-        return personInterface.getPersonList(name);
+        return personInterface.getPersonList();
     }
 }

@@ -13,13 +13,13 @@ public class ControllerDelete {
     @Autowired
     PersonInterface personInterface;
 
-    @RequestMapping (value="/persona{id}", method =DELETE)
+    @RequestMapping (value="/persona/{id}", method =DELETE)
     public void deletePersonById (@PathVariable int id){
         Person perId = personInterface.getPersonById(id);
 
         if(perId != null){
             String name = perId.getName();
-            personInterface.getPersonList(perId.getName()).remove(perId);
+            personInterface.getPersonList().remove(perId);
 
         }
     }

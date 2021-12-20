@@ -3,6 +3,7 @@ package com.example.crud_ex5;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -11,14 +12,21 @@ public class PersonImplement implements PersonInterface {
     @Autowired
             Person person;
 
-    List <Person> personList;
-
-List<Person> getPersonList() {return personList;}
+private List<Person> personList = new ArrayList<>();
 
     @Override
-    public List<Person> getPersonList(String name) {
-        return null;
+    public List<Person> getPersonList() {
+        return personList;
     }
+
+
+    @Override
+    public void addPersonList(Person person) {
+        personList.add(person);
+    }
+
+
+
 
     public Person getPersonById(int Id) {
         for (int i = 0; i < personList.size(); i++) {
