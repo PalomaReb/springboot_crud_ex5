@@ -19,7 +19,7 @@ public class ControllerDelete {
 
         if(perId != null){
             String name = perId.getName();
-            personInterface.newPersonList(perId.getName()).remove(perId);
+            personInterface.getPersonList(perId.getName()).remove(perId);
 
         }
     }

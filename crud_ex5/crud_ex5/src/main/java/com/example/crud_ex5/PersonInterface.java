@@ -5,6 +5,7 @@ import java.util.List;
 public interface PersonInterface {
 
     List<Person> getPersonList(String name);
+
     Person getPersonById(int id);
 
     Person person();
